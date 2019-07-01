@@ -1,6 +1,7 @@
 package com.app;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 import pl.allegro.finance.tradukisto.MoneyConverters;
 
@@ -74,7 +75,13 @@ public class NumberWordConverter {
     }
     
     public static void main(String[] args) {
-		String str=getMoneyIntoWords(1212.12);
+    	
+    	Scanner sc=new Scanner(System.in);
+    	System.out.println("Pls Enter Amount : ");
+    	
+    	Double amt=sc.nextDouble();
+    	
+		String str=getMoneyIntoWords(amt);
 		String[] strArr=str.split(" ");
 		String result="";
 		for(String strword:strArr) {
